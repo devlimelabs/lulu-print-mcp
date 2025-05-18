@@ -1,0 +1,60 @@
+{
+  "name": "@devlime/domain-radar-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for domain name intelligence - availability, expiring and expired domains tracking",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "domain-radar-mcp": "dist/bin/cli.js"
+  },
+  "files": [
+    "dist",
+    ".env.example",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node build.js",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "lint": "eslint --ext .ts src/",
+    "test": "jest",
+    "setup:dev": "bash scripts/setup-dev.sh",
+    "setup:claude": "node scripts/claude-desktop-setup.js",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "domain",
+    "availability",
+    "expired-domains",
+    "model-context-protocol"
+  ],
+  "author": "DevLime Labs",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.6.0",
+    "commander": "^11.1.0",
+    "dotenv": "^16.3.1",
+    "node-fetch": "^3.3.2",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.10",
+    "@types/node": "^20.11.0",
+    "@typescript-eslint/eslint-plugin": "^6.12.0",
+    "@typescript-eslint/parser": "^6.12.0",
+    "eslint": "^8.54.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "tsx": "^4.19.3",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

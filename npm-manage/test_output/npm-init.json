@@ -1,0 +1,16 @@
+{
+  "jsonrpc": "2.0",
+  "method": "callTool",
+  "params": {
+    "name": "npm-init",
+    "args": {
+      "packageName": "test-package",
+      "version": "1.0.0",
+      "description": "Test package initialization",
+      "author": "Test Author",
+      "license": "MIT",
+      "type": "module"
+    }
+  },
+  "id": 1
+}

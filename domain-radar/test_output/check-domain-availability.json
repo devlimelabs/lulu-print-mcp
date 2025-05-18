@@ -1,0 +1,11 @@
+{
+  "jsonrpc": "2.0",
+  "method": "callTool",
+  "params": {
+    "name": "check-domain-availability",
+    "args": {
+      "domain": "example.com"
+    }
+  },
+  "id": 1
+}

@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  domain-radar-mcp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: domain-radar-mcp
+    environment:
+      NODE_ENV: production
+      # Add your API keys and configurations here
+      # DOMAIN_API_KEY: your_api_key_here
+    volumes:
+      # Mount a local .env file for configuration
+      - ./.env:/app/.env:ro
+    # Use this to expose the SSE server if implemented
+    # ports:
+    #   - "3000:3000"
+    restart: unless-stopped
+    networks:
+      - domain-radar-network
+
+networks:
+  domain-radar-network:
+    driver: bridge

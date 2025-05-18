@@ -1,0 +1,17 @@
+{
+  "collections": [
+    {
+      "collectionId": "users",
+      "operations": ["read", "query"]
+    },
+    {
+      "collectionId": "posts",
+      "operations": ["read", "query"]
+    },
+    {
+      "collectionId": "comments",
+      "operations": ["read", "query"]
+    }
+  ],
+  "defaultAllow": false
+}

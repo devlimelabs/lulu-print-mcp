@@ -1,0 +1,38 @@
+{
+  "name": "amazon-shopping-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for Amazon shopping using Product Advertising API",
+  "type": "module",
+  "main": "build/src/index.js",
+  "bin": {
+    "amazon-shopping-mcp": "./build/src/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/src/index.js",
+    "dev": "ts-node-esm src/index.ts"
+  },
+  "keywords": [
+    "mcp",
+    "amazon",
+    "shopping",
+    "product-advertising-api"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.6.0",
+    "axios": "^1.6.7",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^16.4.1",
+    "xml2js": "^0.6.2",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.2.1",
+    "@types/node": "^20.10.7",
+    "@types/xml2js": "^0.4.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}

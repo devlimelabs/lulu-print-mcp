@@ -1,0 +1,9 @@
+{
+  "jsonrpc": "2.0",
+  "method": "callTool",
+  "params": {
+    "name": "get-watcher-config",
+    "args": {}
+  },
+  "id": 6
+}

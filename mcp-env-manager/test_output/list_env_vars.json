@@ -1,0 +1,11 @@
+{
+  "jsonrpc": "2.0",
+  "method": "callTool",
+  "params": {
+    "name": "list-env-vars",
+    "args": {
+      "profileId": "PROFILE_ID_PLACEHOLDER"
+    }
+  },
+  "id": 5
+}
