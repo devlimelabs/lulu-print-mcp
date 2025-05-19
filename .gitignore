@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+coverage/
+.vscode/
+.idea/
+*.tgz
+build/
+out/
+*.pid
+*.seed
+*.pid.lock
