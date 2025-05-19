@@ -8,10 +8,16 @@ startCommand:
       command: 'node',
       args: ['dist/index.js'],
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
+        LULU_API_KEY: config.LULU_API_KEY || 'YOUR_API_KEY_HERE'
       }
     })
   configSchema:
     type: object
-    properties: {}
-  exampleConfig: {}
+    properties:
+      LULU_API_KEY:
+        type: string
+        description: Lulu API key for authentication
+        default: ""
+  exampleConfig:
+    LULU_API_KEY: ''
