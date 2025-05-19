@@ -1,51 +1,17 @@
-# Smithery AI Configuration for Lulu Print MCP
-smithery_version: "1.0"
+# Smithery configuration for this MCP
+# https://smithery.ai/docs/config#smitheryyaml
 
-# Docker configuration
-docker:
-  build:
-    dockerfile: Dockerfile
-    context: .
-  
-# Basic metadata
-metadata:
-  name: lulu-print-mcp
-  description: Model Context Protocol server for Lulu Print API - Access print-on-demand services through Claude Desktop
-  version: 0.1.0
-  author: DevLime Labs
-  tags:
-    - mcp
-    - print
-    - publishing
-    - lulu
-    - pod
-
-# Build configuration
-build:
-  steps:
-    - name: Install dependencies
-      command: pnpm install --frozen-lockfile
-    - name: Build
-      command: pnpm build
-    - name: Test
-      command: pnpm test
-      
-# Runtime configuration
-runtime:
-  command: ["node", "dist/bin/cli.js"]
-  
-# Environment variables (if needed)
-environment:
-  NODE_ENV: production
-
-# Resources
-resources:
-  cpu: 256
-  memory: 512
-
-# Health check
-healthcheck:
-  test: ["CMD", "node", "-e", "process.exit(0)"]
-  interval: 30s
-  timeout: 10s
-  retries: 3
+startCommand:
+  type: stdio
+  commandFunction: |
+    (config) => ({
+      command: 'node',
+      args: ['dist/index.js'],
+      env: {
+        NODE_ENV: 'production'
+      }
+    })
+  configSchema:
+    type: object
+    properties: {}
+  exampleConfig: {}
